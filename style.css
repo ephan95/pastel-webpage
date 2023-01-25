@@ -1,0 +1,157 @@
+/* colors */
+html {
+  --pink: #f6c1d9;
+  --yellow: #ffe29e;
+  --red: #f3736d;
+  --blue: #897ffc;
+  --orange: #feb389;
+  --light-blue: #84b5fa;
+  --border: #4d3f46;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  font-kerning: auto;
+  --pink: #f6c1d9;
+}
+
+h1 {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+}
+
+p {
+  font-size: 1.8rem;
+  font-family: "Prompt", sans-serif;
+  margin: 0;
+}
+
+q {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-size: 40px;
+  background-image: repeating-linear-gradient(
+    to right,
+    var(--pink) 0px,
+    var(--pink) 20px,
+    var(--border) 20px,
+    var(--border) 23px
+  );
+  background-attachment: fixed;
+  margin: 0px;
+}
+
+.flex-orientation::before {
+  display: block;
+  background: repeating-linear-gradient(
+    var(--pink) 0px,
+    var(--pink) 40px,
+    var(--border) 40px,
+    var(--border) 43px
+  );
+  position: fixed;
+  content: "";
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  width: 51.3%;
+  z-index: -3;
+  border-left: #4d3f46 solid 3px;
+}
+
+.waves {
+  position: fixed;
+  width: 100%;
+  height: auto;
+  z-index: -2;
+  top: -200px;
+  bottom: 0px;
+}
+
+.dots {
+  position: fixed;
+  z-index: -1;
+  left: 2em;
+  width: 100%;
+  height: auto;
+}
+
+.cloud-sun {
+  position: fixed;
+  left: 1em;
+}
+
+.cloud {
+  position: fixed;
+  right: 2em;
+  top: 30%;
+}
+
+.flex-orientation {
+  display: flexbox;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  margin: 8rem;
+  z-index: 10;
+  margin-bottom: 20rem;
+}
+
+.paddingbox {
+  background-color: white;
+  margin: 0;
+  padding: 2rem 2rem;
+  border: 0.2rem solid var(--border);
+  border-radius: 0.8em;
+}
+
+.paddingbox + .paddingbox {
+  margin-block: 1.3em;
+}
+
+.text-colorful * {
+  font-size: 5rem;
+  font-weight: 700;
+  text-shadow: -2px -2px 0 #4d3f46, 0 -2px 0 #4d3f46, 2px -2px 0 #4d3f46,
+    2px 0 0 #4d3f46, 2px 2px 0 #4d3f46, 0 2px 0 #4d3f46, -2px 2px 0 #4d3f46,
+    -2px 0 0 #4d3f46;
+}
+
+.r {
+  color: var(--red);
+}
+
+.y {
+  color: var(--yellow);
+}
+
+.lb {
+  color: var(--light-blue);
+}
+
+.p {
+  color: var(--pink);
+}
+
+.b {
+  color: var(--blue);
+}
+
+.text-plain {
+  padding-block: 0.6rem;
+}
+
+.quote {
+  display: flex;
+  flex-direction: column;
+}
