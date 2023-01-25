@@ -128,6 +128,22 @@ body {
     margin-inline: 20em;
   }
 }
+
+@media screen and (min-width: 3000px) {
+  .waves {
+    top: -700px;
+  }
+  .cloud-sun {
+    left: 20%;
+  }
+  .cloud {
+    right: 20%;
+  }
+  .flex-orientation {
+    margin-inline: 40em;
+  }
+}
+
 .paddingbox {
   background-color: white;
   margin: 0;
