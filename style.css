@@ -24,18 +24,16 @@ h1 {
   margin: 0;
 }
 
-p {
+p,
+q {
   font-size: 1.8rem;
   font-family: "Prompt", sans-serif;
   margin: 0;
 }
 
-q {
-  font-size: 16px;
-  font-weight: 400;
-  font-family: "Source Sans Pro", sans-serif;
-  margin: 0;
-  padding: 0;
+q:before,
+q:after {
+  content: "";
 }
 
 body {
@@ -78,6 +76,15 @@ body {
   bottom: 0px;
 }
 
+@media screen and (max-width: 1000px) {
+  .waves {
+    top: -500px;
+    width: 110%;
+    left: -2em;
+    top: -50px;
+  }
+}
+
 .dots {
   position: fixed;
   z-index: -1;
@@ -104,9 +111,23 @@ body {
   text-align: center;
   margin: 8rem;
   z-index: 10;
-  margin-bottom: 20rem;
+  margin-bottom: 40rem;
 }
 
+@media screen and (min-width: 1500px) {
+  .waves {
+    top: -500px;
+  }
+  .cloud-sun {
+    left: 10%;
+  }
+  .cloud {
+    right: 10%;
+  }
+  .flex-orientation {
+    margin-inline: 20em;
+  }
+}
 .paddingbox {
   background-color: white;
   margin: 0;
@@ -125,6 +146,14 @@ body {
   text-shadow: -2px -2px 0 #4d3f46, 0 -2px 0 #4d3f46, 2px -2px 0 #4d3f46,
     2px 0 0 #4d3f46, 2px 2px 0 #4d3f46, 0 2px 0 #4d3f46, -2px 2px 0 #4d3f46,
     -2px 0 0 #4d3f46;
+}
+
+.smallerbox {
+  background-color: white;
+  border: solid 3px var(--border);
+  padding: 0.5em;
+  width: 10em;
+  margin: auto;
 }
 
 .r {
@@ -148,10 +177,18 @@ body {
 }
 
 .text-plain {
-  padding-block: 0.6rem;
+  padding-block: 0.8rem;
 }
 
 .quote {
   display: flex;
   flex-direction: column;
+}
+
+.quote .headline {
+  margin-bottom: 1.3rem;
+}
+
+.quote .text-colorful * {
+  font-size: 3rem;
 }
