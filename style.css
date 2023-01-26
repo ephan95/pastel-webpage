@@ -185,9 +185,9 @@ body {
   grid-template-columns: 49% 49%;
   grid-template-rows: 49% 49%;
   column-gap: 2%;
-  row-gap: 30%;
+  row-gap: 25%;
   margin-inline: 8rem;
-  margin-bottom: 200em;
+  margin-bottom: 40em;
   text-align: center;
 }
 
@@ -198,6 +198,65 @@ body {
 .paddingboxgrid + .paddingboxgrid {
   margin-top: 0.5em;
 }
+
+/* Footer */
+
+footer {
+  position: relative;
+}
+
+footer::before {
+  content: "";
+  background-color: white;
+  border: 3px solid var(--border);
+  display: block;
+  padding: 0.2em;
+  margin: 0em 8em 0.5em 8em;
+  border-radius: 0.8em;
+}
+
+.cloud-moon {
+  position: absolute;
+  z-index: 3;
+  right: 30%;
+  bottom: 50%;
+}
+
+.footer {
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 8em 2em 8em;
+  border: solid 3px var(--border);
+  padding: 2rem 2rem;
+  border-radius: 0.8em;
+  z-index: 1;
+}
+
+footer p {
+  font-size: 1rem;
+  padding: 0.3em;
+}
+
+footer h2 {
+  font-size: 1rem;
+  margin: 0;
+  padding: 0.3em;
+}
+
+.linkedin,
+.github {
+  padding-inline: 1em;
+  transition: transform 0.3s ease;
+}
+
+.linkedin:hover,
+.github:hover {
+  transform: scale(110%);
+}
+
+/* responsiveness */
 
 @media screen and (min-width: 1500px) {
   .waves {
@@ -214,6 +273,11 @@ body {
     margin-top: 10rem;
   }
   .facts-grid {
+    margin-inline: 20em;
+  }
+
+  .footer,
+  footer::before {
     margin-inline: 20em;
   }
 }
