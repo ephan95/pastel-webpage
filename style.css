@@ -96,12 +96,14 @@ body {
 .cloud-sun {
   position: fixed;
   left: 1em;
+  z-index: 20;
 }
 
 .cloud {
   position: fixed;
   right: 2em;
   top: 30%;
+  z-index: 20;
 }
 
 .flex-orientation {
@@ -182,9 +184,9 @@ body {
 
 .facts-grid {
   display: grid;
-  grid-template-columns: 49% 49%;
-  grid-template-rows: 49% 49%;
-  column-gap: 2%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 2em;
   row-gap: 25%;
   margin-inline: 8rem;
   margin-bottom: 40em;
@@ -197,6 +199,83 @@ body {
 
 .paddingboxgrid + .paddingboxgrid {
   margin-top: 0.5em;
+}
+
+.music-slide {
+  margin-inline: 8rem;
+  z-index: 10;
+  margin-bottom: 40rem;
+}
+
+.video-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.music-text {
+  margin-inline: 1em 3em;
+}
+
+.music-text .text-colorful * {
+  font-size: 4rem;
+}
+
+.music-text .text-plain {
+  font-size: 1.2rem;
+}
+
+.music-playlist {
+  border: 3px var(--border) solid;
+  width: 25em;
+  aspect-ratio: 16/9;
+  height: auto;
+}
+
+.music-wrapper {
+  padding: 4em 1em;
+  background-color: var(--blue);
+  border-radius: 4%;
+  border: 3px var(--border) solid;
+  position: relative;
+}
+
+.music-wrapper::after {
+  content: "";
+  display: flex;
+  padding: 0.15em;
+  background-color: #4d3f46;
+  position: absolute;
+  bottom: 2em;
+  left: 4.5%;
+  width: 90%;
+  border-radius: 10%;
+}
+
+.music-wrapper::before {
+  content: "";
+  display: flex;
+  padding: 0.2em;
+  border: 3px var(--border) solid;
+  position: absolute;
+  width: 8rem;
+  top: 1.4em;
+  left: 4em;
+  background-color: var(--red);
+  border-radius: 2em;
+}
+
+.video-box::before {
+  content: "";
+  padding: 1em;
+  border: 3px var(--border) solid;
+  position: absolute;
+  background-color: #f6c1d9;
+  border-radius: 50%;
+  z-index: 15;
+  top: 2.8em;
+  right: 26em;
 }
 
 /* Footer */
@@ -275,9 +354,11 @@ footer h2 {
   .facts-grid {
     margin-inline: 20em;
   }
-
   .footer,
   footer::before {
     margin-inline: 20em;
+  }
+  .music-slide {
+    margin-inline: 20rem;
   }
 }
